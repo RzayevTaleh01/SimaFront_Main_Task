@@ -2,11 +2,14 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+
 .pagination-body{
   width: 80%;
   margin: 0 auto;
 }
-
+.pagination-footer{
+  display: flex;
+}
 .pagination-container {
   display: flex;
   list-style-type: none;

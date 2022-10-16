@@ -33,7 +33,11 @@ const Pagination = props => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <ul
+    <div className='pagination-footer'>
+      <ul className='pagination-right-side'>
+        <li>{currentPage}/{lastPage}</li>
+      </ul>
+      <ul
       className={classnames('pagination-container', { [className]: className })}
     >
       <li
@@ -68,7 +72,8 @@ const Pagination = props => {
       >
         <div className="arrow right" />
       </li>
-    </ul>
+    </ul></div>
+    
   );
 };
 
