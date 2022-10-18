@@ -1,13 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-*{
-  font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-.pagination-body{
-  width: 80%;
-  margin: 0 auto;
+body {
+  background-color: #fbfbfb;
 }
-.pagination-footer{
+
+ul {
+  list-style: none;
+}
+
+//Input
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+thead tr th {
+  font-weight: 500;
+  text-align: left;
+  background-color: #fafafa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+th,
+td {
+  padding: 8px;
+  overflow-wrap: break-word;
+}
+
+.pagination-bar {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  margin: 20px auto;
+
+  .table-search {
+    width: 80%;
+    position: relative;
+
+    .search-input {
+      border: none;
+      padding: 14px 20px;
+
+      &:focus {
+        box-shadow: none;
+      }
+      &::placeholder {
+        color: #9599a0;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+}
+.pagination-footer {
   display: flex;
 }
 .pagination-container {
@@ -45,7 +109,7 @@
     .arrow {
       &::before {
         position: relative;
-        content: '';
+        content: "";
         display: inline-block;
         width: 0.4em;
         height: 0.4em;

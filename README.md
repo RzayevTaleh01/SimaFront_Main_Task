@@ -1,6 +1,12 @@
-# Sima Reporting System Task 1
+# Sima Reporting System 
+
+## Task 1
 
 Pagination for report tables
+
+## Task 2
+
+Search by PIN
 
 # Used Tehnologies
 
