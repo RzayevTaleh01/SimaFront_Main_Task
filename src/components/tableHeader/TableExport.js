@@ -12,7 +12,7 @@ export default function () {
     <div className="table-export">
       <ButtonGroup>
         <UncontrolledDropdown>
-          <DropdownToggle caret>Dropdown</DropdownToggle>
+          <DropdownToggle caret>Export</DropdownToggle>
           <DropdownMenu>
             <DropdownItem>Export as.csv</DropdownItem>
             <DropdownItem>Export as.excl</DropdownItem>

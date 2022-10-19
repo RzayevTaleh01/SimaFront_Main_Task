@@ -4,7 +4,7 @@ import TableFilter from "./TableFilter";
 import TableSearch from "./TableSearch";
 
 export default function TableHeader({
-  setSearchValue,  setCurrentPage,
+  setSearchValue, setCurrentPage,
 }) {
   return (
     <div className="table-header">

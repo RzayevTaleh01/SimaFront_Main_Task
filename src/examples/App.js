@@ -4,6 +4,8 @@ import data from "./data/mock-data.json";
 import "../assets/style/style.scss";
 import Pagination from "../components/Pagination";
 import TableHeader from "../components/tableHeader";
+import { useSelector } from "react-redux";
+import TableFilterDetail from "../components/tableHeader/TableFilterDetail";
 
 let PageSize = 5;
 
@@ -21,17 +23,22 @@ export default function App() {
       ];
     }
     setTotalCount(filterData.length);
+
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return filterData.slice(firstPageIndex, lastPageIndex);
   }, [data, searchValue, currentPage]);
 
+  const { filterMode } = useSelector((state) => state.filter);
   return (
     <div className="table-element">
       <TableHeader
         setSearchValue={setSearchValue}
         setCurrentPage={setCurrentPage}
       />
+
+      {filterMode ? <TableFilterDetail /> : <> </>}
+
       <TableData currentTableData={currentTableData} />
       <Pagination
         className="pagination-bar"

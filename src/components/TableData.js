@@ -16,6 +16,7 @@ export default function TableData({ currentTableData }) {
         {currentTableData.map((item, index) => {
           return (
             <tr key={index}>
+              {console.log(currentTableData.length)}
               <td>{item.first_name}</td>
               <td>{item.last_name}</td>
               <td>{item.pin}</td>
