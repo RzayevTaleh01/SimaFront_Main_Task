@@ -33,7 +33,8 @@ export default function App() {
   return (
     <div className="table-element">
       <TableHeader
-        setSearchValue={setSearchValue}        setCurrentPage={setCurrentPage}
+        setSearchValue={setSearchValue}
+        setCurrentPage={setCurrentPage}
       />
       <TableData currentTableData={currentTableData} />
       <Pagination

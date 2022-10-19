@@ -13,18 +13,17 @@ export default function TableData({ currentTableData }) {
         </tr>
       </thead>
       <tbody>
-        {currentTableData
-             .map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{item.first_name}</td>
-                <td>{item.last_name}</td>
-                <td>{item.pin}</td>
-                <td>{item.transaction}</td>
-                <td>{item.date}</td>
-              </tr>
-            );
-          })}
+        {currentTableData.map((item, index) => {
+          return (
+            <tr key={index}>
+              <td>{item.first_name}</td>
+              <td>{item.last_name}</td>
+              <td>{item.pin}</td>
+              <td>{item.transaction}</td>
+              <td>{item.date}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

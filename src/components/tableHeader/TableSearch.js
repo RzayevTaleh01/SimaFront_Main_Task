@@ -1,9 +1,7 @@
 import { Input } from "reactstrap";
 import SearchIcon from "../../assets/img/Combined-Shape.svg";
 
-export default function TableSearch({
-  setSearchValue,  setCurrentPage,
-}) {
+export default function TableSearch({ setSearchValue, setCurrentPage }) {
   return (
     <div className="table-search">
       <Input
