@@ -8,6 +8,10 @@ Pagination for report tables
 
 Search by PIN
 
+## Task 3
+
+Filter the table by date and category
+
 # Used Tehnologies
 
 - React Js

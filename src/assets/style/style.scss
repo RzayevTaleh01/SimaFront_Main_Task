@@ -11,6 +11,11 @@ ul {
   list-style: none;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -40,28 +45,79 @@ td {
   width: 80%;
   margin: 20px auto;
 
-  .table-search {
-    width: 80%;
-    position: relative;
+  .table-header {
+    display: flex;
+    align-items: center;
 
-    .search-input {
-      border: none;
-      padding: 14px 20px;
+    .table-search {
+      width: 80%;
+      position: relative;
+      border: 1px solid #f8f8f8;
 
-      &:focus {
-        box-shadow: none;
+      .search-input {
+        border: none;
+        padding: 14px 20px;
+
+        &:focus {
+          box-shadow: none;
+        }
+        &::placeholder {
+          color: #9599a0;
+        }
       }
-      &::placeholder {
-        color: #9599a0;
+
+      .search-icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
       }
     }
 
-    .search-icon {
-      position: absolute;
-      top: 15px;
-      right: 15px;
+    .table-filter {
+      display: flex;
+      margin-left: 20px;
+      margin-right: 14px;
+      justify-content: center;
+      padding: 14px 24px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #f8f8f8;
+    }
+
+    .table-export {
+      border: 1px solid #f8f8f8;
+
+      .btn-secondary {
+        background-color: #ffffff !important;
+        color: #1d204f !important;
+        border: none;
+        padding: 14px 20px;
+      }
+      .dropdown-toggle::after {
+        margin-left: 11px !important;
+        vertical-align: 0.175em !important;
+      }
+
+      .dropdown-menu {
+        border: none;
+        &.show {
+          inset: 17px auto auto 0px !important;
+          padding: 12px 20px !important;
+          border-radius: 8px !important;
+        }
+      }
+
+      .dropdown-item {
+        padding: 12px 20px;
+
+        &:hover {
+          border-radius: 8px;
+          padding: 12px 20px;
+        }
+      }
     }
   }
+
   .table-footer {
     display: flex;
   }

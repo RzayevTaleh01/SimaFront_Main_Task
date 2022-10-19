@@ -11,11 +11,8 @@ export default function App() {
   const [searchValue, setSearchValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
-  console.log(searchValue);
-
   const currentTableData = useMemo(() => {
     let filterData = data;
-
     if (searchValue) {
       filterData = [
         ...filterData.filter((item) => {
@@ -24,7 +21,6 @@ export default function App() {
       ];
     }
     setTotalCount(filterData.length);
-
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return filterData.slice(firstPageIndex, lastPageIndex);
