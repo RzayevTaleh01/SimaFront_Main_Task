@@ -1,21 +1,19 @@
-import React, { useState } from "react";
 import { Input } from "reactstrap";
-import App from "../examples/App";
-import TableData from "./TableData";
+import SearchIcon from "../assets/img/Combined-Shape.svg";
 
 
-export default function TableSearch({data}) {
+export default function TableSearch({setSearchValue,searchValue,setCurrentPage}) {
 
-  const [search, setSearch] = useState('');
-
-  const handleSearch = (e) => {
-    setSearch(e.target.value)
-  };
 
 
   return (
     <div className="table-search">
-      <Input onChange={handleSearch} />
-    </div>
+        <Input
+          className="search-input"
+          placeholder="FİN-ə görə axtar..."
+          onChange={e => {setSearchValue(e.target.value); setCurrentPage(1)}}
+        />
+        <img className="search-icon" src={SearchIcon} />
+      </div>
   );
 }

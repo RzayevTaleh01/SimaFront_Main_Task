@@ -1,20 +1,16 @@
 import React, { useState, useMemo } from "react";
 import TableData from "../components/TableData";
-import Pagination from "../Pagination";
 import data from "./data/mock-data.json";
 import "../assets/style/style.scss";
-import { Input } from "reactstrap";
-import SearchIcon from "../assets/img/Combined-Shape.svg"
+import TableSearch from "../components/TableSearch";
+import Pagination from "../components/Pagination";
 
-let PageSize = 10;
+let PageSize = 5;
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
-  const handleChange = (e) => {
-    setSearchValue(e.target.value);
-  };
   console.log(searchValue);
 
   const currentTableData = useMemo(() => {
@@ -23,9 +19,7 @@ export default function App() {
     if (searchValue) {
       filterData = [
         ...filterData.filter((item) => {
-          return item.pin
-            .toLowerCase()
-            .includes(searchValue.toLowerCase());
+          return item.pin.toLowerCase().includes(searchValue.toLowerCase());
         }),
       ];
     }
@@ -38,9 +32,11 @@ export default function App() {
 
   return (
     <div className="table-body">
-      <div className="table-search">
-        <Input className="search-input" placeholder="FİN-ə görə axtar..." onChange={handleChange} /> <img className="search-icon" src={SearchIcon} />
-      </div>
+      <TableSearch
+        setSearchValue={setSearchValue}
+        searchValue={searchValue}
+        setCurrentPage={setCurrentPage}
+      />
       <TableData currentTableData={currentTableData} />
       <Pagination
         className="pagination-bar"
