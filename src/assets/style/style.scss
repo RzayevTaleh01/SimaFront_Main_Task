@@ -11,8 +11,6 @@ ul {
   list-style: none;
 }
 
-//Input
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -35,13 +33,7 @@ td {
   overflow-wrap: break-word;
 }
 
-.pagination-bar {
-  width: 100%;
-  display: flex;
-  justify-content: right;
-}
-
-.table-body {
+.table-element {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -70,10 +62,11 @@ td {
       right: 15px;
     }
   }
+  .table-footer {
+    display: flex;
+  }
 }
-.pagination-footer {
-  display: flex;
-}
+
 .pagination-container {
   display: flex;
   list-style-type: none;
@@ -140,4 +133,10 @@ td {
       }
     }
   }
+}
+
+.pagination-bar {
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }

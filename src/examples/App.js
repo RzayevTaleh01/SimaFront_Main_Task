@@ -2,8 +2,8 @@ import React, { useState, useMemo } from "react";
 import TableData from "../components/TableData";
 import data from "./data/mock-data.json";
 import "../assets/style/style.scss";
-import TableSearch from "../components/TableSearch";
 import Pagination from "../components/Pagination";
+import TableHeader from "../components/tableHeader";
 
 let PageSize = 5;
 
@@ -31,11 +31,9 @@ export default function App() {
   }, [data, searchValue, currentPage]);
 
   return (
-    <div className="table-body">
-      <TableSearch
-        setSearchValue={setSearchValue}
-        searchValue={searchValue}
-        setCurrentPage={setCurrentPage}
+    <div className="table-element">
+      <TableHeader
+        setSearchValue={setSearchValue}        setCurrentPage={setCurrentPage}
       />
       <TableData currentTableData={currentTableData} />
       <Pagination

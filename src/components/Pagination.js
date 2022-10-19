@@ -33,7 +33,7 @@ const Pagination = (props) => {
 
   let lastPage = paginationRange[paginationRange.length - 1];
   return (
-    <div className="pagination-footer">
+    <div className="table-footer">
       <ul className="pagination-right-side">
         <li>
           {currentPage}/{lastPage}
