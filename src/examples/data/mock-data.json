@@ -699,14 +699,6 @@
         "first_name": "Sima user 4",
         "last_name": "Sime user lastname 4",
         "transaction": "XX.XXX.XX",
-        "pin": "vefa",
-        "date": "DD.MM.YYYY"
-    },
-    {
-        "id": 4,
-        "first_name": "Sima user 4",
-        "last_name": "Sime user lastname 4",
-        "transaction": "XX.XXX.XX",
         "pin": "2zed123",
         "date": "DD.MM.YYYY"
     },
