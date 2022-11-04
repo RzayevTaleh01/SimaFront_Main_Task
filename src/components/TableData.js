@@ -1,4 +1,6 @@
+import dayjs from "dayjs";
 import React from "react";
+
 
 export default function TableData({ currentTableData }) {
   return (
@@ -16,12 +18,12 @@ export default function TableData({ currentTableData }) {
         {currentTableData.map((item, index) => {
           return (
             <tr key={index}>
-              {console.log(currentTableData.length)}
+           
               <td>{item.first_name}</td>
               <td>{item.last_name}</td>
               <td>{item.pin}</td>
               <td>{item.transaction}</td>
-              <td>{item.date}</td>
+              {dayjs(item?.date).format("DD MMM YYYY")}
             </tr>
           );
         })}
